@@ -17,7 +17,6 @@ $$ LANGUAGE plpgsql;
  * 
  */
 
-
 // also the following
 
 /**
@@ -40,7 +39,7 @@ const mysql = require('mysql2');
 // PostgreSQL connection
 const pgClient = new Client({
     user: 'postgres',
-    host: 'localhost',
+    host: '127.0.0.1',
     database: 'lama',
     password: 'ammaAMMA1!',
     port: 5432,
@@ -48,7 +47,7 @@ const pgClient = new Client({
 
 // MySQL connection (or same PostgreSQL connection)
 const mysqlConnection = mysql.createConnection({
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
     password: 'ammaAMMA1!',
     database: 'lama',
@@ -77,3 +76,4 @@ async function listenForNewEmployees() {
 
 // Start listening for new employee notifications
 listenForNewEmployees();
+// this code is here 
